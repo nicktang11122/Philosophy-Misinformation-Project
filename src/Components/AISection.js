@@ -121,10 +121,9 @@ function AISection() {
                 to distinguish between genuine and altered content.
                 Convolutional Neural Networks (CNNs) are typically employed to
                 extract features from images, such as edges, textures, and
-                patterns. The model is then optimized with a loss function
-                (e.g., binary cross-entropy) to minimize errors. Once trained,
-                the model can classify new images as real or fake based on the
-                patterns it has learned.
+                patterns. The model is then optimized with a loss function to
+                minimize errors. Once trained, the model can classify new images
+                as real or fake based on the patterns it has learned.
               </strong>
             </li>
           </ul>
@@ -181,19 +180,19 @@ function AISection() {
         <h2>Few Example Images Experimented With</h2>
         <div className="grid">
           <div className="photo-item">
-            <img src={AI2} alt="Placeholder 1" />
+            <img src={AI2} alt="Fake AI Image" />
             <p>FAKE</p>
           </div>
           <div className="photo-item">
-            <img src={me} alt="Placeholder 2" />
+            <img src={me} alt="Photo of Me" />
             <p>REAL</p>
           </div>
           <div className="photo-item">
-            <img src={AI1} alt="Placeholder 3" />
+            <img src={AI1} alt="Fake AI Image" />
             <p>FAKE</p>
           </div>
           <div className="photo-item">
-            <img src={Sky} alt="Placeholder 4" />
+            <img src={Sky} alt="Sunset Photo" />
             <p>REAL</p>
           </div>
         </div>

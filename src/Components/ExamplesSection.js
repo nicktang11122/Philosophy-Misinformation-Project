@@ -63,21 +63,20 @@ function ExamplesSection() {
               <strong>
                 Misinformation undermines confidence in critical institutions,
                 such as governments, healthcare systems, and media outlets. When
-                false narratives spread unchecked, the public may become
-                skeptical of legitimate information, leading to reduced
-                compliance with important policies, such as public health
-                directives during pandemics or election integrity measures.
+                false narratives spread, the public may become skeptical of
+                legitimate information, leading to reduced compliance with
+                important policies, such as public health directives during
+                pandemics or election integrity measures.
               </strong>
             </li>
             <li>
               <strong>
-                The rapid spread of misinformation exacerbates societal
-                divisions by creating echo chambers and amplifying biases. This
-                increases polarization, making it difficult to foster
-                constructive dialogue or consensus on pressing issues like
-                climate change, education reform, and social justice. These
-                divisions erode the fabric of communities and impede
-                collaborative problem solving.
+                The rapid spread of misinformation exacerbates social divisions
+                by creating echo chambers and amplifying biases. This increases
+                polarization, making it difficult to create constructive
+                dialogue on pressing issues like climate change, education
+                reform, and social justice. These divisions erode the fabric of
+                communities and impede collaborative problem solving.
               </strong>
             </li>
             <li>
@@ -101,12 +100,11 @@ function ExamplesSection() {
           <ul>
             <li>
               <strong>
-                Detection and Monitoring of Misinformation: AI, particularly
-                machine learning algorithms, significantly enhances the ability
-                to detect and classify misinformation by analyzing large
-                datasets and identifying patterns in real time. These systems
-                excel in understanding context and differentiating between
-                various types of false information, such as deepfakes or
+                Detection and Monitoring of Misinformation: AI significantly
+                enhances the ability to detect and classify misinformation by
+                analyzing large datasets and identifying patterns in real time.
+                These systems excel in understanding context and differentiating
+                between various types of false information, such as deepfakes or
                 fabricated news, offering a scalable solution for monitoring
                 global information streams. (Clark, 2024)
               </strong>

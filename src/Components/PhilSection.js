@@ -12,9 +12,8 @@ function PhilSection() {
         philosophers like Mill and Longino might think about it.
       </h2>
 
-      {/* Philosophers and AI Impact Section */}
       <div className="philosophy-content">
-        {/* John Stuart Mill Section */}
+        {/* Mill Section */}
         <div className="philosopher-section">
           <img
             src={Mill}
@@ -24,12 +23,11 @@ function PhilSection() {
           <div className="philosopher-text">
             <h3>John Stuart Mill</h3>
             <p>
-              Mill, an advocate for the "marketplace of ideas," believed that
-              exposure to diverse perspectives is crucial for truth and
-              intellectual progress. He might view AI as a powerful tool to
-              enhance belief formation by providing access to vast and varied
-              information. However, Mill would likely caution against
-              over-reliance on AI, as it could reduce personal critical thinking
+              Mill believed that exposure to diverse perspectives is crucial for
+              truth and intellectual progress. He would view AI as a powerful
+              tool to enhance belief formation by providing access to vast and
+              varied information. However, I believe Mill would likely caution
+              against over-reliance on AI, as it could reduce critical thinking
               and engagement with opposing views. He would likely express
               concerns about the risk of algorithmic "filter bubbles," where
               users are only exposed to information reinforcing their existing
@@ -55,18 +53,16 @@ function PhilSection() {
             <li>
               <strong>Creation of Uncertainty: </strong>
               Interactions with generative AI systems can create doubt about
-              factual information, especially when users are unsure about the
-              accuracy or intent of the responses. This phenomenon can make
-              users overly reliant on AI as an authority or diminish trust in
-              credible sources​
+              real information, especially when users are unsure about the
+              accuracy or intent of the responses.
             </li>
             <li>
               <strong>Bias Amplification: </strong> AI systems often mirror the
-              biases present in their training data. For instance, if historical
-              data reflects societal inequities, these biases can be
-              perpetuated, affecting decisions in areas like hiring, lending, or
-              legal judgments. This not only influences individual beliefs about
-              fairness but can also entrench systemic inequalities​
+              biases in their training data. For instance, if historical data
+              reflects societal inequalities​, these biases can be perpetuated,
+              affecting decisions in areas like hiring, lending, or legal
+              judgments. This not only influences individual beliefs about
+              fairness but can also increase systemic inequalities
             </li>
             <li>
               <strong>Shaping Public Discourse: </strong> AI has the potential
@@ -85,7 +81,7 @@ function PhilSection() {
           </ul>
         </div>
 
-        {/* Helen Longino Section */}
+        {/*  Longino Section */}
         <div className="philosopher-section">
           <img
             src={Longino}
@@ -95,17 +91,17 @@ function PhilSection() {
           <div className="philosopher-text">
             <h3>Helen Longino</h3>
             <p>
-              Longino, known for her work on the social dimensions of knowledge,
-              would concentrate on the role of AI in promoting inclusivity and
-              transparency in belief formation. She sees AI as a tool that can
-              democratize access to diverse viewpoints, which aligns with her
-              belief that knowledge is shaped by community interaction and
-              critique. AI's ability to identify patterns and biases may aid in
-              addressing power imbalances in knowledge production. Nonetheless,
-              Longino emphasizes the importance of ethical AI development. She
-              would warn against systems that unintentionally perpetuate
-              existing social biases or exclude marginalized voices, arguing
-              that they may reinforce rather than challenge societal inequities.
+              Longino would concentrate on the role of AI in promoting
+              inclusivity and transparency in belief formation. She would see AI
+              as a tool that can publicize access to diverse viewpoints, which
+              aligns with her belief that knowledge is shaped by community
+              interaction and critique. She'd believe AI can be used to identify
+              patterns and biases, which may aid in addressing power imbalances
+              in knowledge production. Nonetheless, Longino emphasizes the
+              importance of ethical AI development. She would warn against
+              systems that unintentionally promtote existing social biases,
+              arguing that they may reinforce rather than challenge societal
+              inequities.
             </p>
           </div>
         </div>
