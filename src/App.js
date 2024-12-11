@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Navbar from "./Components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./Components/pages/Home";
+import Examples from "./Components/pages/Examples";
+import AIPage from "./Components/pages/AIPage";
+import PhilPage from "./Components/pages/PhilPage";
+import Bibliography from "./Components/pages/Bibliography";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Home />}></Route>
+          <Route path="/examples" exact element={<Examples />}></Route>
+          <Route path="/ai-detector" exact element={<AIPage />}></Route>
+          <Route path="/phil-ideas" exact element={<PhilPage />}></Route>
+          <Route path="/bibliography" exact element={<Bibliography />}></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
