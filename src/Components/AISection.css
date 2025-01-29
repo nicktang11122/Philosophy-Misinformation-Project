@@ -29,8 +29,25 @@
     width: 100%;
     text-align: left;
 }
+.image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    max-width: 400px; 
+    max-height: 400px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.AI-textarea,
+.image-preview img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
+}
+
 .AI-file-input {
     width: 100%;
     padding: 12px;

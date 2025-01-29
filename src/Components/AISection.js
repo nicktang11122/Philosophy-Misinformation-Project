@@ -7,46 +7,63 @@ import AI2 from "../images/ai image.png";
 import Sky from "../images/image0.jpg";
 
 function AISection() {
-  const [textInput, setTextInput] = useState(""); // State to track text input
   const [imageFile, setImageFile] = useState(null); // State to track uploaded image
   const [imagePreview, setImagePreview] = useState(null); // State to preview uploaded image
+  const [analysisResult, setAnalysisResult] = useState(""); // State to display analysis result
 
   // Handlers for input changes
-  const handleTextChange = (e) => setTextInput(e.target.value);
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImageFile(file);
     setImagePreview(file ? URL.createObjectURL(file) : null);
+    setAnalysisResult(""); // Reset result when a new image is uploaded
   };
 
-  // Handler for form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!textInput && !imageFile) {
-      alert("Please provide either text input or an image.");
+
+    if (!imageFile) {
+      alert("Please upload an image to analyze.");
       return;
     }
-    console.log("Text Input:", textInput);
-    console.log("Image File:", imageFile);
+
+    const formData = new FormData();
+    formData.append("image", imageFile);
+
+    try {
+      const response = await fetch(
+        "https://misinformation.vercel.app/api/predict",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json(); // Parse JSON response
+
+      if (!response.ok) {
+        alert(`Error: ${data.error}`);
+        console.error("Server Response Error:", data);
+        return;
+      }
+
+      // Update result state with analysis data
+      setAnalysisResult(
+        `Result: ${data.result}, Confidence: ${(data.confidence * 100).toFixed(
+          2
+        )}%`
+      );
+    } catch (error) {
+      console.error("Error analyzing image:", error);
+      alert("An error occurred while analyzing the image. Please try again.");
+    }
   };
 
   return (
     <div className="AI-container">
-      <h1>AI Detector (Currently Does Not Work)</h1>
-      <h2 className="AI-subtitle">Enter an image or text below.</h2>
+      <h1>AI Detector</h1>
+      <h2 className="AI-subtitle">Upload an image below to analyze.</h2>
       <form onSubmit={handleSubmit} className="AI-form">
-        {/* Text Input */}
-        <div className="AI-input-group">
-          <label htmlFor="textInput">Text Input:</label>
-          <textarea
-            id="textInput"
-            placeholder="Type your text here..."
-            value={textInput}
-            onChange={handleTextChange}
-            className="AI-textarea"
-          />
-        </div>
-
         {/* File Input */}
         <div className="AI-input-group">
           <label htmlFor="imageInput">Upload an Image:</label>
@@ -76,17 +93,25 @@ function AISection() {
         </button>
       </form>
 
+      {/* Display Analysis Result */}
+      {analysisResult && (
+        <div className="AI-result">
+          <h2>Analysis Result:</h2>
+          <p>{analysisResult}</p>
+        </div>
+      )}
+
       <div className="Explaination-Section">
-        <h2> Why I Couldn't Implement AI Detector</h2>
+        <h2>Why I Couldn't Implement AI Detector</h2>
         <div className="infos">
           <strong>
-            Given the time constrait and my limited knowledge of AI Models, I
+            Given the time constraint and my limited knowledge of AI Models, I
             was not able to implement a detection model at this time. When
-            searching for open sourced, pre-trained models, I was not able to
+            searching for open-sourced, pre-trained models, I was not able to
             find one that was accurate. Although many of these models produce a
-            high accurary score, models are trained under a certain datatset and
+            high accuracy score, models are trained under a certain dataset and
             my photos may not match them. For example, I tried multiple photos
-            of me with different lightings, angles, and the results would vary.
+            of me with different lighting, angles, and the results would vary.
             Since they aren't able to be trained with massive datasets like big
             companies could, it isn't possible for me to produce an accurate
             detector without training it myself. Like stated, due to the time
